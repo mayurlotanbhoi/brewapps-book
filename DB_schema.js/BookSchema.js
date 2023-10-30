@@ -6,22 +6,22 @@ const bookSchema = new mongoose.Schema({
         type: Number,
         required: true,
         unique: true
-      },
-  title: {
-    type: String,
-    required: true
-  },
-  author: {
-    type: String,
-    required: true
-  },
-  summary:{
-    type: String,
-    required: true
-  }
+    },
+    title: {
+        type: String,
+        required: true
+    },
+    author: {
+        type: String,
+        required: true
+    },
+    summary: {
+        type: String,
+        required: true
+    }
 });
 
 // Create the book model
 const Book = mongoose.model("Book", bookSchema);
 
-export default  Book; // Export the Book model
+export default Book; // Export the Book model

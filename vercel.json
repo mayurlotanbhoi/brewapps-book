@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/$1"
+      }
+    ],
+    "env": {
+      "MONGO_URL": "mongodb+srv://mayur:1234@cluster0.3d2bark.mongodb.net/brewapps-book-store?retryWrites=true&w=majority"
+    }
+  }
+  

@@ -9,6 +9,7 @@ dotenv.config()
 
 const app = express();
 const DB = process.env.MONGO_URL
+const PORT = process.env.PORT || 3000
 
 app.use(express.json());
 
@@ -34,6 +35,6 @@ app.use((req, res, next) => {
     return;
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("App is running on port 3000");
 });
